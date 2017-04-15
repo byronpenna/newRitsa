@@ -1,3 +1,63 @@
 .marginNull{
 	margin: 0;
 }
+.divHead
+{
+	width: 100%;
+	height: 100px;
+	background: #4070b6;
+}
+body{
+	background: #e5e3e3;
+
+}
+.contenedorCuerpo{
+	width: 90%;
+	margin: 0 auto;
+}
+
+.navegacion{
+	background: white;
+}
+.contenedorCuerpo .titulo{
+	width: 90%;
+	margin: 0 auto;
+	background: white;
+	text-align: center;
+	
+}
+.contenedorCuerpo .cuerpo{
+	width: 90%;
+	margin: 0 auto;
+	background: white;
+	margin-top: 3%;
+	text-align: justify;
+	padding: 3%;
+}
+.navegacion .titulo h3{
+	text-align: center;
+}
+.menuNavegacion ul{
+	margin: 0;
+	padding: 0;
+}
+.menuNavegacion ul li{
+	list-style: none;
+	display: block;
+	text-align: center;
+	margin: 0;
+	padding-bottom: 2%;
+	color: #4070b6;
+}
+.navegacion .titulo,.contenedorCuerpo .titulo{
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+.navegacion,.contenedorCuerpo .titulo{
+	margin-top: 25px;
+}
+
+.contenedorCuerpo .cuerpo img{
+	max-width: 90%;
+
+}
