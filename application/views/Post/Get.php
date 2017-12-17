@@ -1,10 +1,18 @@
+<!-- <pre>
+<?php 
+//print_r($datos->post);
+?>	
+</pre> -->
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Titulo</title>
+	<title><?php echo $datos->post->title ?></title>
 	<?php
 		$this->load->view("parts/head.php");
 	?>
+
+	<meta name="description" content="Aprende sobre el integrado CD4511B mediante un pequeño proyecto practico en el que introducimos un binario y este pasa a ser decimal">
 </head>
 <body>
 	<div class="row marginNull divHead">
