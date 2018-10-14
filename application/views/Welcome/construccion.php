@@ -5,7 +5,7 @@
 	<?php
 		$this->load->view("parts/head.php");
 	?>
-	<link rel="stylesheet" type="text/css" href=<?php echo base_url("Content/css/paginas/welcome/construccion/style.css") ?> >
+	<link rel="stylesheet" type="text/css" href=<?php echo base_url("content/css/paginas/welcome/construccion/style.css") ?> >
 </head>
 <body>
 	
