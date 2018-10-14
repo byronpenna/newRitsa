@@ -10,6 +10,9 @@ class Post extends CI_Controller
 		$this->_model = new ModelPost();
 	}
 	// urls 
+		public function index(){
+			$this->load->view("Post/GetPosts.php",$data);
+		}
 		public function getPost($anio,$mes,$dia,$titulo)
 		{
 			
