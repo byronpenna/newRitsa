@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-class Welcome extends CI_Controller {
+include_once(APPPATH.'controllers/PadreController.php'); 
+class Welcome extends PadreController {
 
 	/**
 	 * Index Page for this controller.
@@ -18,8 +18,73 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	// variables 
+		private $_model;
+	// metodos magicos
+	public function __construct(){
+		parent::__construct();
+		$this->load->helper('form');
+		$this->load->library('session');	
+	}
+	// privados
+		private function getUserFromPostLogin(){
+			$usuario = new Usuario();
+			$usuario->setUsuario($_POST['Username']);
+			$usuario->setPass($_POST['Password']);
+			return $usuario;
+		}
+	// publicos 
+	public function logout(){
+		$_SESSION = null;
+		session_destroy();
+		redirect('/Welcome/index', 'refresh');
+	}
+	public function test(){
+		$this->load->model("controles/ControlArticulo");
+		$control 	= new ControlArticulo();
+		$articulos 	= $control->obtenerUltimas();
+		$data 		= array(
+			'articulos' => $articulos
+		);
+		$this->load->view("Welcome/Index.php",$data);
+	}
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->model("controles/ControlArticulo");
+		$control 	= new ControlArticulo();
+		$articulos 	= $control->obtenerUltimas();
+		$data 		= array(
+			'articulos' => $articulos
+		);
+		$this->load->view("Welcome/construccion.php",$data);
+	}
+	public function login(){
+		$data = array();
+		$this->load->view("Welcome/login.php",$data);
+	}
+	public function AccesoLogin(){
+		$this->load->model("acciones/PantallaUsuario");
+		$pantalla = new PantallaUsuario();				
+		$usuario = $this->getUserFromPostLogin();
+		$roles = array(); // array de roles del usuario;
+		$logueado = $pantalla->login($usuario,$roles);
+		if ($logueado){
+			$this->session->set_userdata('usuario',$usuario);
+			redirect('/Welcome/test', 'refresh');
+		}else{
+			redirect('/Welcome/index', 'refresh');
+		}
+	}
+	public function buscar()
+	{
+		$this->load->model("controles/ControlArticulo");
+		$frm = $this->getAjaxFrm($_POST["form"]);
+		//print_r($frm);
+		$control = new ControlArticulo();
+		$retorno = new stdClass();
+		$retorno->estado = true;
+		$retorno->resultado = $control->buscar($frm->textoBusqueda);
+
+		echo json_encode($retorno);
 	}
 }

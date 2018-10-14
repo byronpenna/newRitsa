@@ -1,94 +1,46 @@
 .marginNull{
 	margin: 0;
 }
-.divHead
-{
-	width: 100%;
-	background: #4070b6;
+.heading { border-bottom:3px solid #ddd; }
+.twitter-hover {
+    background-image: url('https://lut.im/SRoUJUn7V4/cORSlFIVBlR7M8Zv.png');
 }
-body{
-	background: #e5e3e3;
-
+.facebook-hover {
+    background-image: url('https://lut.im/9LlTfOBMjB/ccPwdiudyoF3x1wE.png');
 }
-.contenedorCuerpo{
-	width: 90%;
-	margin: 0 auto;
+.google-hover {
+    background-image: url('https://lut.im/qGelLnYHZ3/dL1Hrnzyl7cMz14e.png');
 }
-
-.navegacion{
-	background: white;
+.linkedin-hover {
+    background-image: url('https://lut.im/JNIybEyJDx/6gAE6YPt35e7qMAB.png');
 }
-.contenedorCuerpo .titulo{
-	width: 90%;
-	margin: 0 auto;
-	background: white;
-	text-align: center;
-	
+.pinterest-hover {
+    background-image: url('https://lut.im/fU1GnJ1cOw/d0iRmklZgk2l6o5W.png');
 }
-.contenedorCuerpo .cuerpo{
-	width: 90%;
-	margin: 0 auto;
-	background: white;
-	margin-top: 3%;
-	text-align: justify;
-	padding: 3%;
+.instagram-hover {
+    background-image: url('https://lut.im/0LARg4VaCM/bWRJ8RbjK0r14RdO.png');
 }
-.navegacion .titulo h3{
-	text-align: center;
+.tumblr-hover {
+    background-image: url('https://lut.im/wJDqfDmhLL/YZoci8VwKz37qwv4.png');
 }
-.menuNavegacion ul{
-	margin: 0;
-	padding: 0;
+.reddit-hover {
+    background-image: url('https://lut.im/zfzy0kvZKw/BJBLoz6FyoLLFZGg.png');
 }
-.menuNavegacion ul li{
-	list-style: none;
-	display: block;
-	text-align: center;
-	margin: 0;
-	padding-bottom: 2%;
-	color: #4070b6;
+.stumbleupon-hover {
+    background-image: url('https://lut.im/sdOPL3LP6d/VMRYTaE6cZxHa3Hq.png');
 }
-.navegacion .titulo,.contenedorCuerpo .titulo{
-	padding-top: 1%;
-	padding-bottom: 1%;
+.social-slide {
+	height: 48px;
+	width: 48px;
+	margin: 10px;
+	float: left;
+	-webkit-transition: all ease 0.3s;
+	-moz-transition: all ease 0.3s;
+	-o-transition: all ease 0.3s;
+	-ms-transition: all ease 0.3s;
+	transition: all ease 0.3s;
 }
-.navegacion,.contenedorCuerpo .titulo{
-	margin-top: 25px;
-}
-.menuPrincipal{
-	background: #1564c0;
-	margin-top: 90px;
-	color: white;
-	text-align: center;
-
-}
-	.menuPrincipal ul{
-		margin: 0;
-		padding-top: 1%;
-		padding-bottom: 1%;
-
-	}
-	.menuPrincipal ul li a{
-		color: white;
-		font-size: 1.5em;
-	}
-	.menuPrincipal ul li{
-		list-style: none;
-		display: inline-block;
-		margin-right: 5%;
-	}
-.contenedorCuerpo .cuerpo img{
-	max-width: 90%;
-
-}
-ins{
-	max-width: 100% !important
-} 
-iframe{
-	max-width: 100% !important;
-}
-.anuncioNavegacion
-{
-	margin-top: 25px;
-
+.social-slide:hover {
+	background-position: 0px -48px;
+	box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
 }
